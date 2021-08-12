@@ -1,0 +1,76 @@
+<title>MyPersonalGym Add Course</title>
+<link rel="shortcut icon" href="img/gym.png" />
+<meta charset="utf-8">
+<meta
+	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+	name='viewport' />
+<meta name="viewport" content="width=device-width" />
+<link href="/css/bootstrap.min.css" rel="stylesheet" />
+<!--  Light Bootstrap Table core CSS    -->
+<link href="/css/light-bootstrap-dashboard.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="sidebar" data-color="blue"
+			data-image="/img/lateralAdmin.jpg">
+			<div class="sidebar-wrapper">
+				<div class="logo">
+					<a href="/" class="simple-text"> MyPersonalGym </a>
+				</div>
+				<ul class="nav">
+					<li><a href="/adminPage/manageUsers"> <i
+							class="fa fa-user"></i>
+							<p>Gestión de usuarios</p>
+					</a></li>
+					<li><a href="/adminPage/manageCourses"> <i
+							class="fa fa-users"></i>
+							<p>Gestión de actividades</p>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="main-panel">
+			<div class="container-fluid">
+				<div class="form-container">
+					<form class="form-group" method="post"
+						action="/adminPage/manageCourses/addCourse" enctype="multipart/form-data">
+						<div class="form-group">
+							<br> <label for="newName">Nombre</label> <input name="name" type="text"
+								class="form-control" id="name" placeholder="Previous Name">
+						</div>
+						<div class="form-group">
+							<label for="newName">Categoría</label>
+							<select class="form-control" name="category"required="required">
+								{{#categories}}
+							 		<option>{{.}}</option>
+							 	{{/categories}}
+                    		</select>
+						</div>
+						<div class="form-group">
+							<label for="newName">Descripción</label> <input name="description" type="text"
+								class="form-control" id="description"
+								placeholder="Description">
+						</div>
+						<div class="form-group">
+							<label for="newName">Horario</label> <input name="schedules" type="text"
+								class="form-control" id="schedules" placeholder="Schedules">
+						</div>
+						<div class="form-group">
+							<input type="file" name="file" id="file" /> <label
+								for="file" class="btn ">Subir imagen</label>
+						</div>
+						<div class="form-group">
+								<button type="submit" class="btn btn-primary">Guardar actividad</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

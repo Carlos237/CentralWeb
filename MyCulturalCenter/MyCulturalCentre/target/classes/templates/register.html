@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="En">
+
+<head>
+<meta charset="utf-8">
+<title>Cultural Centre Register</title>
+<link rel="shortcut icon" href="img/hoja.png" />
+
+<meta name="description" content="Love Authority." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+
+<link rel="stylesheet" href="css/register.css" />
+
+</head>
+
+<body>
+	<!--hero section-->
+	<section class="hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-8 mx-auto">
+					<div class="card border-none">
+						<div class="card-body">
+							<div class="mt-2 text-center">
+								<h2>Crea tu cuenta</h2>
+							</div>
+							<p class="mt-4 text-white lead text-center">Entra para empezar</p>
+							<div class="mt-4">
+								<form method="post" action="/user/register">
+									<!-- Method to not saw the password -->
+									<div class="form-group">
+										<input type="text" class="form-control" name="nickname"
+											placeholder="Nombre de Usuario">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" name="name"
+											placeholder="Nombre">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" name="surname"
+											placeholder="Apellidos">
+									</div>
+									<div class="form-group">
+										<input type="email" class="form-control" name="email"
+											placeholder="Dirección de correo">
+									</div>
+									<div class="form-group">
+										<input type="password" class="form-control" name="password"
+											placeholder="Contraseña">
+									</div>
+									<div class="form-group">
+										<input type="password" class="form-control"
+											name="Confirm password" placeholder="Confirmar contraseña">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" name="age"
+											placeholder="Edad">
+									</div>
+									<div style="float: left; width: 48%">
+										<button type="submit" class="btn btn-primary btn-block">
+											Crear Cuenta</button>
+									</div>
+									<div style="float: right; width: 48%">
+										<button type="reset" class="btn btn-primary btn-block">Cancelar</button>
+										<script type="text/javascript">
+								document.getElementById("goBackbtn").onclick = function() {
+									location.href = "/";
+								};
+							</script>
+											</a>
+									</div>
+								</form>
+							</div>
+
+							<div class="clearfix"></div>
+							<p class="content-divider center mt-4">
+								<span>o</span>
+							</p>
+						</div>
+						<p class="text-center">
+						¿Ya tienes una cuenta? <a href="/login">Login</a>
+						</p>
+						<p class="text-center">
+							<button type="submit" class="btn btn-primary" id="goBackbtn">Ir atrás</button>
+							<script type="text/javascript">
+								document.getElementById("goBackbtn").onclick = function() {
+									location.href = "/";
+								};
+							</script>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-sm-12 mt-5 footer"></div>
+		</div>
+		</div>
+	</section>
+
+
+</body>
+
+</html>

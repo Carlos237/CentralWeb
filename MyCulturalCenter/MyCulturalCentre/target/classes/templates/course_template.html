@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+<div class="col-lg-4 col-sm-6">
+	<div class="portfolio-box"> 
+	<img class="img-fluid" src="{{src}}" alt="{{name}}"/>
+		<div class="portfolio-box-caption">
+			<div class="portfolio-box-caption-content">
+				<div class="project-category text-faded">
+					Categoría
+				</div>
+				<div class="project-name">
+					{{name}}
+				</div>
+				<div class="project-description">
+					{{description}}
+					<hr>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card-footer-course">
+	{{#schedules}}	
+		{{schedule}}
+			<a class="btn btn-sign simple_confirmSign" data-coursename="{{course.name}}" data-idschedule="{{idSchedule}}">Entrar</a>	
+			<a class="btn btn-quit simple_confirmQuit" data-coursename="{{course.name}}" data-idschedule="{{idSchedule}}">Abandonar</a>
+   		Ocupación: {{capacity}}/50
+   		<br>
+	{{/schedules}}
+    </div>
+    <br>
+</div>
+   		
+
