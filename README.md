@@ -1,2 +1,2 @@
 # CentralWeb
-It is a solo web project aimed at passing the DAW subject at URJC, with the Spring Boot and Angular technologies.
+It is a solo web project that was originally intended to pass the DAW DAW subject at URJC, but expanded with its own implementation of a fully functional REST API, with the Spring Boot, MYSQL and bootstrap Technologies.
